@@ -13,3 +13,5 @@ RUN apt-get update && \
     pip install tensorflow==1.13.1 &&\
     pip install tensorboardX &&\
     pip install tensorboard &&\
+    apt-get clean && \
+    apt-get autoremove

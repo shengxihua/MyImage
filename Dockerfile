@@ -7,7 +7,7 @@ RUN apt-get update && \
     apt install -y openssh-server openssh-client && \
     apt install -y libopenblas-dev && \
     apt install -y libgl1-mesa-glx &&\
-    pip install MinkowskiEngine==0.4.0
+    pip install MinkowskiEngine==0.4.0 &&\
     pip install open3d==0.9.0.0 &&\
     pip install torch-points3d && \
     pip install tensorflow==1.13.1 &&\

@@ -1,5 +1,8 @@
 FROM pytorch/pytorch:1.7.0-cuda11.0-cudnn8-devel
 
+RUN rm /etc/apt/sources.list.d/cuda.list && rm /etc/apt/sources.list.d/nvidia-ml.list && \
+	sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
+    
 RUN apt-get update && \
     apt install -y openssh-server openssh-client && \
     apt install -y libopenblas-dev && \

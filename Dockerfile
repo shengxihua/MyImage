@@ -1,7 +1,7 @@
 FROM lualong/pytorch1.3.1-cu10
 
 RUN rm /etc/apt/sources.list.d/cuda.list && rm /etc/apt/sources.list.d/nvidia-ml.list && \
-    sed -me 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
+    sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
     
 RUN apt-get update && \
     apt install -y openssh-server openssh-client && \

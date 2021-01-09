@@ -1,0 +1,17 @@
+FROM registry.cn-hangzhou.aliyuncs.com/xhsheng/github_dockerfile:torch1_4_mink040_tf113
+
+RUN apt-get update && \
+	pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas && \
+	pip install -i https://pypi.tuna.tsinghua.edu.cn/simple scipy && \
+	pip install torch-scatter==latest+cu101 -f https://pytorch-geometric.com/whl/torch-1.4.0.html &&\
+	pip install torch-sparse==latest+cu101 -f https://pytorch-geometric.com/whl/torch-1.4.0.html &&\
+	pip install torch-cluster==latest+cu101 -f https://pytorch-geometric.com/whl/torch-1.4.0.html &&\
+	pip install torch-spline-conv==latest+cu101 -f https://pytorch-geometric.com/whl/torch-1.4.0.html &&\
+	pip install -i https://pypi.tuna.tsinghua.edu.cn/simple networkx &&\
+	pip install -i https://pypi.tuna.tsinghua.edu.cn/simple python-louvain &&\
+	pip install -i https://pypi.tuna.tsinghua.edu.cn/simple scikit_learn &&\
+	pip install -i https://pypi.tuna.tsinghua.edu.cn/simple numba &&\
+	pip install -i https://pypi.tuna.tsinghua.edu.cn/simple ase &&\
+	pip install -i https://pypi.tuna.tsinghua.edu.cn/simple torch-geometric &&\
+	apt-get clean && \
+    apt-get autoremove	

@@ -8,9 +8,5 @@ RUN apt-get update && \
     apt install -y libopenblas-dev && \
     pip install MinkowskiEngine==0.4.0 && \
     apt install -y libgl1-mesa-glx &&\
-    pip install open3d-python && \
-    pip install tensorboardX &&\
-    pip install tensorflow==1.13.1 &&\
-    pip install pandas && \
     apt-get clean && \
     apt-get autoremove

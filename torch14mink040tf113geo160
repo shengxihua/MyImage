@@ -1,0 +1,6 @@
+
+FROM registry.cn-hangzhou.aliyuncs.com/xhsheng/github_dockerfile:Dockerfile_torch14mink040tf113geo
+RUN apt-get update && \
+    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple torch-geometric==1.6.0 && \
+	  apt-get clean && \
+    apt-get autoremove	

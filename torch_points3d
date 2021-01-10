@@ -1,6 +1,8 @@
-FROM registry.cn-hangzhou.aliyuncs.com/xhsheng/github_dockerfile:torch_1_7_cuda11
+FROM registry.cn-hangzhou.aliyuncs.com/xhsheng/github_dockerfile:torch_points3d
 
-RUN apt-get update && \
-    apt install -y openssh-server openssh-client && \
-    apt install -y libopenblas-dev && \
-    apt install -y libgl1-mesa-glx
+RUN pip install --no-index torch-scatter -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html && \
+    pip install --no-index torch-sparse -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html && \
+    pip install --no-index torch-cluster -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html && \
+    pip install --no-index torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html && \
+    export TORCH_CUDA_ARCH_LIST="7.0;7.5" && \
+    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple torch-points3d

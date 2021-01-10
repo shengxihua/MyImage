@@ -1,4 +1,6 @@
 FROM registry.cn-hangzhou.aliyuncs.com/xhsheng/github_dockerfile:torch_1_7_cuda11
 
 RUN apt-get update && \
-    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple torch-points3d
+    apt install -y openssh-server openssh-client && \
+    apt install -y libopenblas-dev && \
+    apt install -y libgl1-mesa-glx

@@ -1,0 +1,3 @@
+FROM registry.cn-hangzhou.aliyuncs.com/xhsheng/github_dockerfile:torch14mink040tf113geo160
+RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple torch-points3d==1.1.1 && \
+    pip install plyfile

@@ -1,6 +1,7 @@
 FROM registry.cn-hangzhou.aliyuncs.com/xhsheng/github_dockerfile:torch_160cuda101
 
-RUN pip install --no-index torch-scatter -f https://pytorch-geometric.com/whl/torch-1.6.0+cu101.html && \
+RUN pip install -i  https://pypi.tuna.tsinghua.edu.cn/simple scipy && \
+    pip install --no-index torch-scatter -f https://pytorch-geometric.com/whl/torch-1.6.0+cu101.html && \
     pip install --no-index torch-sparse -f https://pytorch-geometric.com/whl/torch-1.6.0+cu101.html && \
     pip install --no-index torch-cluster -f https://pytorch-geometric.com/whl/torch-1.6.0+cu101.html && \
     pip install --no-index torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.6.0+cu101.html && \

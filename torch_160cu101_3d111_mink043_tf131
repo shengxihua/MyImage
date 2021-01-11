@@ -1,0 +1,4 @@
+FROM registry.cn-hangzhou.aliyuncs.com/xhsheng/github_dockerfile:torch_160cu101_3d111_mink043
+RUN pip install  -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow==1.13.1 && \
+    pip install  -i https://pypi.tuna.tsinghua.edu.cn/simple open3d-python && \
+    pip install  -i https://pypi.tuna.tsinghua.edu.cn/simple pandas 

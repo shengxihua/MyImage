@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/xhsheng/github_dockerfile:torch16_geo163_mink043_tf131_3d111
+FROM registry.cn-hangzhou.aliyuncs.com/xhsheng/github_dockerfile:torch16_geo163_mink050_tf131_3d111
 RUN pip uninstall -y torch_cluster && \
     pip install torch-cluster==1.5.6 && \
     pip uninstall MinkowskiEngine && \

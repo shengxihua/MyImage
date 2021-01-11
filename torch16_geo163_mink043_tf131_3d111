@@ -1,9 +1,7 @@
 FROM registry.cn-hangzhou.aliyuncs.com/xhsheng/github_dockerfile:torch16torch_geometric163_mink050_tf131_points3d111
 RUN export TORCH_CUDA_ARCH_LIST="7.0;7.5"
 
-RUN pip uninstall -y torch_cluster && \
-    pip install torch-cluster==1.5.6 && \
-    pip uninstall -y MinkowskiEngine && \
+RUN pip uninstall -y MinkowskiEngine && \
     pip install MinkowskiEngine==0.4.3
     
     

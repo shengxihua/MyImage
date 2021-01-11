@@ -4,9 +4,10 @@ RUN apt-get update
 
 RUN export TORCH_CUDA_ARCH_LIST="7.0;7.5"
 
-RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple torch-points3d==1.1.1 && \
+RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple scipy && \
+    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple torch-points3d==1.1.1 && \
     pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow==1.13.1 && \
     pip install tensorboardX $$ \
     pip install open3d-python && \
-    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas && \
+    pip install -me https://pypi.tuna.tsinghua.edu.cn/simple pandas && \
     pip install MinkowskiEngine==0.4.3

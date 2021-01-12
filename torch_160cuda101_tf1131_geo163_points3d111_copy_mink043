@@ -4,6 +4,9 @@ WORKDIR /home
 
 COPY MinkowskiEngine-0.4.3 ./MinkowskiEngine-0.4.3
 RUN pwd && \
+    ls && \
+    cd MinkowskiEngine-0.4.3 && \
+    pwd && \
     ls
 RUN pip uninstall -y MinkowskiEngine && \
     python setup.py install --force_cuda --cuda_home=/usr/local/cuda

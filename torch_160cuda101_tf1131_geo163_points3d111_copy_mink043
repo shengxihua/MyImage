@@ -2,7 +2,7 @@ FROM registry.cn-hangzhou.aliyuncs.com/xhsheng/github_dockerfile:torch_160cuda10
 
 WORKDIR /home
 
-COPY MinkowskiEngine-0.4.3
+COPY MinkowskiEngine-0.4.3 .
 RUN ls
 RUN pip uninstall -y MinkowskiEngine && \
     python setup.py install --force_cuda --cuda_home=/usr/local/cuda

@@ -1,0 +1,3 @@
+FROM registry.cn-hangzhou.aliyuncs.com/xhsheng/github_dockerfile:torch_160cuda101_tf1131_geo163_points3d111_mink043
+RUN pip uninstall -y MinkowskiEngine && \
+    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple MinkowskiEngine

@@ -1,4 +1,0 @@
-FROM registry.cn-hangzhou.aliyuncs.com/xhsheng/github_dockerfile:torch_160cuda101_mink043_tf1131_geo163_points3d111
-RUN pip install torch-cluster==latest+cu101 -f https://pytorch-geometric.com/whl/torch-1.6.0.html && \
-    pip uninstall -y MinkowskiEngine && \
-    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple MinkowskiEngine==0.4.3

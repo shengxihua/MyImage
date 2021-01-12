@@ -9,4 +9,4 @@ RUN pwd && \
     pwd && \
     ls
 RUN pip uninstall -y MinkowskiEngine && \
-    python setup.py install --force_cuda --cuda_home=/usr/local/cuda
+    python /home/MinkowskiEngine-0.4.3/setup.py install --force_cuda --cuda_home=/usr/local/cuda

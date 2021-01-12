@@ -1,0 +1,4 @@
+FROM registry.cn-hangzhou.aliyuncs.com/xhsheng/github_dockerfile:torch_160cuda101_tf1131_geo163_points3d111_copy_mink043
+RUN pip uninstall torch-points-kernels $$ \
+    export TORCH_CUDA_ARCH_LIST="3.5;5.2;6.1;7.0;7.5" && \
+    pip install torch-points-kernels==0.6.10

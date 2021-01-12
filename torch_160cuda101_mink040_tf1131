@@ -1,0 +1,9 @@
+FROM registry.cn-hangzhou.aliyuncs.com/xhsheng/github_dockerfile:torch_160cuda101
+RUN apt-get update && \
+    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple open3d-python && \
+    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow==1.13.1 && \
+    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorboardX && \
+    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas && \
+    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple scipy && \
+    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple plyfile && \
+    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple MinkowskiEngine==0.4.0

@@ -1,5 +1,5 @@
 FROM registry.cn-hangzhou.aliyuncs.com/xhsheng/github_dockerfile:torch_160cuda101_tf1131_geo163_points3d111_mink050
-
-COPY MinkowskiEngine-0.4.3 /home/MinkowskiEngine-0.4.3
+WORKDIR /home
+COPY MinkowskiEngine-0.4.3 .
 RUN pip uninstall -y MinkowskiEngine && \
-    python /home/MinkowskiEngine-0.4.3/setup.py install --force_cuda --cuda_home=/usr/local/cuda
+    python setup.py install --force_cuda --cuda_home=/usr/local/cuda

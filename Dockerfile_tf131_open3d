@@ -1,0 +1,20 @@
+  
+FROM tensorflow/tensorflow:1.13.1-gpu
+
+RUN rm /etc/apt/sources.list.d/cuda.list && rm /etc/apt/sources.list.d/nvidia-ml.list && \
+    sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+
+RUN apt-get update && \
+    apt install -y openssh-server openssh-client && \
+    apt install -y libopenblas-dev && \
+    apt-get install libsm6 -y && \
+    apt-get install libxrender1 -y && \
+    apt-get install libxext-dev -y && \
+    pip install -U pandas && \
+    pip install -U dask && \
+    pip install -U scipy && \
+    pip install -U sklearn && \
+    pip install open3d==0.9.0.0 && \
+    apt install -y libgl1-mesa-glx &&\
+    apt-get clean && \
+    apt-get autoremove

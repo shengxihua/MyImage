@@ -1,5 +1,5 @@
   
-FROM tensorflow/tensorflow:1.13.1-gpu
+FROM tensorflow/tensorflow:1.13.1-gpu-py3
 
 RUN rm /etc/apt/sources.list.d/cuda.list && rm /etc/apt/sources.list.d/nvidia-ml.list && \
     sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list

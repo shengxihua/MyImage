@@ -15,7 +15,7 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh &
         dask \
         scipy \
         sklearn \
-        open3d==0.9.0.0
+        open3d==0.9.0.0 \
         scikit_learn==0.23.1 
 
 RUN /opt/conda/bin/pip uninstall -y dask

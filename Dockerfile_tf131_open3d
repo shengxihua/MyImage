@@ -18,8 +18,6 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh &
         open3d==0.9.0.0 \
         scikit_learn==0.23.1 
 
-RUN /opt/conda/bin/pip uninstall -y dask
-
 RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc
 RUN echo "conda activate" >> ~/.bashrc
 

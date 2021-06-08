@@ -1,16 +1,26 @@
-  
-FROM tensorflow/tensorflow:1.13.1-gpu-py3
-RUN apt-get update && \
-    apt install -y openssh-server openssh-client && \
-    apt install -y libopenblas-dev && \
-    apt-get install libsm6 -y && \
-    apt-get install libxrender1 -y && \
-    apt-get install libxext-dev -y && \
-    pip install -U pandas && \
-    pip install -U dask && \
-    pip install -U scipy && \
-    pip install -U sklearn && \
-    pip install open3d==0.9.0.0 && \
-    apt install -y libgl1-mesa-glx &&\
-    apt-get clean && \
-    apt-get autoremove
+FROM nvidia/cuda:10.0-cudnn7-runtime-ubuntu16.04
+RUN apt update || true \
+    && apt install -y wget vim bzip2 unzip libsm6 libxrender1 libxext-dev libgl1-mesa-glx\
+    && apt-get clean
+
+#COPY ./Miniconda3-4.5.12-Linux-x86_64.sh /anaconda.sh
+RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && mv Miniconda3-latest-Linux-x86_64.sh /anaconda.sh \
+    && /bin/bash /anaconda.sh -b -p /opt/conda \
+    && rm /anaconda.sh \
+    && /opt/conda/bin/conda install -y \
+        libgcc python=3.7  tensorflow-gpu=1.13 \
+    && /opt/conda/bin/pip install -i https://mirrors.sjtug.sjtu.edu.cn/pypi/web/simple \
+        logbook \ 
+        pandas \
+        dask \
+        scipy \
+        sklearn \
+        open3d==0.9.0.0
+        scikit_learn==0.23.1 
+
+RUN /opt/conda/bin/pip uninstall -y dask
+
+RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc
+RUN echo "conda activate" >> ~/.bashrc
+
+ENV PATH "/opt/conda/bin:$PATH"

@@ -1,1 +1,1 @@
-FROM pytorch/pytorch:1.9.1-cuda11.1-cudnn8-runtime
+FROM minghuaiping/pytorch1.9.1-py38

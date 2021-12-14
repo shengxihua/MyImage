@@ -1,1 +1,1 @@
-FROM pytorch/pytorch:1.9.1-cuda11.1-cudnn8-runtime
+FROM xhsheng/torch1_8_mink_054_open3d10:tagname

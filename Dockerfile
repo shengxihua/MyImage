@@ -1,1 +1,1 @@
-FROM uvarc/minkowskiengine:0.5.4
+FROM xiaowenw/ubuntu18_pytorch171_cuda101_minkow051_torchsparse110

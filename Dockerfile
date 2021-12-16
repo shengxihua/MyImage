@@ -1,1 +1,1 @@
-FROM xiaowenw/ubuntu18_pytorch171_cuda101_minkow051_torchsparse110
+FROM xiaowenw/ubuntu18_pytorch171_cuda101_minkow051_torchsparse110:v1.6

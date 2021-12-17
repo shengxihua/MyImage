@@ -1,1 +1,1 @@
-FROM xiaowenw/wangxw_minkow_sparse:v2.6
+FROM docker pull strivedtye/mink:0.5.4-pytorch1.8.1-v2

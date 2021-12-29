@@ -19,7 +19,3 @@ RUN rm ./install_ffmpeg_supporting_openh264.sh
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir \
     ffmpeg-python
-
-COPY main.py ./
-
-CMD [ "python", "./main.py", "2>/dev/null" ]

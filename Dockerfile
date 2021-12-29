@@ -1,1 +1,1 @@
-FROM coderhelps/docker-toolchain-ffmpeg-static:latest
+FROM benefitex/openh264ffmpeg:latest

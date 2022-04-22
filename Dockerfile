@@ -1,1 +1,1 @@
-FROM tensorflow/tensorflow:1.13.1-gpu-py3
+FROM pytorch/pytorch:1.8.1-cuda10.2-cudnn7-devel

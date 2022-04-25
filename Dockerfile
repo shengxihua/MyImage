@@ -1,4 +1,4 @@
-FROM meadml/cuda10.1-cudnn7-devel-ubuntu18.04-python3.6:latest
+FROM yyq465009551/cuda10_py36_tf114:latest
 RUN apt update -y
 RUN apt-get install software-properties-common -y
 RUN add-apt-repository ppa:deadsnakes/ppa -y

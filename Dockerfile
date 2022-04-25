@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:1.8.1-cuda10.2-cudnn7-develFROM meadml/cuda10.1-cudnn7-devel-ubuntu18.04-python3.6:latest
+FROM meadml/cuda10.1-cudnn7-devel-ubuntu18.04-python3.6:latest
 RUN apt update -y
 RUN apt-get install software-properties-common -y
 RUN add-apt-repository ppa:deadsnakes/ppa -y

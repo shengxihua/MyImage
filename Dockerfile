@@ -1,1 +1,1 @@
-FROM lnguyen/mmediting
+FROM vitanuan/mmedit:latest
